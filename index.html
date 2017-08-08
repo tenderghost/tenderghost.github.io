@@ -4,10 +4,21 @@
 <head>
     <meta charset="utf-8">
     <title>My blog</title>
+	<script type="text/javascript">
+		var today = new Date();
+		var springFestival = new Date("2018-02-15");
+		
+		
+		var timeDiff = Math.abs(springFestival.getTime() - today.getTime());
+		var dayDifference = Math.ceil(timeDiff / (1000 * 3600 * 24));
+	</script>
 </head>
 
 <body>
-    Hello, Blog
+	<div id="counter_down"></div>
+	<script type="text/javascript">
+		document.getElementById("counter_down").innerHTML = "Days: " + dayDifference + "day";
+	</script>
 </body>
 
 </html>
