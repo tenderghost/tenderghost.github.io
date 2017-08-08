@@ -4,21 +4,18 @@
 <head>
     <meta charset="utf-8">
     <title>My blog</title>
-	<script type="text/javascript">
-		var today = new Date();
-		var springFestival = new Date("2018-02-15");
-		
-		
-		var timeDiff = Math.abs(springFestival.getTime() - today.getTime());
-		var dayDifference = Math.ceil(timeDiff / (1000 * 3600 * 24));
-	</script>
+    <script type="text/javascript" src="moment.min.js">
+    </script>
+    <script type="text/javascript">
+        var t = moment("20180215", "YYYYMMDD").fromNow();
+    </script>
 </head>
 
 <body>
-	<div id="counter_down"></div>
-	<script type="text/javascript">
-		document.getElementById("counter_down").innerHTML = "Days: " + dayDifference + "day";
-	</script>
+    <div id="counter_down"></div>
+    <script type="text/javascript">
+        document.getElementById("counter_down").innerHTML = t;
+    </script>
 </body>
 
 </html>
