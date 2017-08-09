@@ -7,14 +7,17 @@
     <script type="text/javascript" src="moment.min.js">
     </script>
     <script type="text/javascript">
-        var t = moment("20180215", "YYYYMMDD").fromNow();
+        var now = moment();
+        var sf = moment("20180215", "YYYYMMDD");
+        var text = sf.fromNow();
+        var days = sf.diff(now, "days");
     </script>
 </head>
 
 <body>
     <div id="counter_down"></div>
     <script type="text/javascript">
-        document.getElementById("counter_down").innerHTML = t;
+        document.getElementById("counter_down").innerHTML = "about " + days + " days left, " + text;
     </script>
 </body>
 
