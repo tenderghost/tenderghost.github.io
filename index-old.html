@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My blog</title>
+    <script type="text/javascript" src="moment.min.js">
+    </script>
+    <script type="text/javascript">
+        var now = moment();
+        var sf = moment("20190205", "YYYYMMDD");
+        var text = sf.fromNow();
+        var days = sf.diff(now, "days");
+    </script>
+</head>
+
+<body>
+    <div id="counter_down"></div>
+    <script type="text/javascript">
+        document.getElementById("counter_down").innerHTML = "about " + days + " days left, " + text;
+    </script>
+</body>
+
+</html>
